@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Track.css";
 
-export class Track extends Component {
+class Track extends Component {
   constructor(props) {
     super(props);
 
