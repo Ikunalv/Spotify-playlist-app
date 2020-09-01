@@ -19,7 +19,7 @@ class App extends React.Component {
     this.removeTrack = this.removeTrack.bind(this);
     this.addTrack = this.addTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
-    this.savePlaylist - this.savePlaylist.bind(this);
+    this.savePlaylist = this.savePlaylist.bind(this);
     this.removeTrackFromSearch = this.removeTrackFromSearch.bind(this);
     this.doThese = this.doThese.bind(this);
   }
@@ -55,42 +55,47 @@ class App extends React.Component {
     this.setState({ SearchResults: tracks });
   }
 
-  doThese(track){
+  doThese(track) {
     this.addTrack(track);
     this.removeTrackFromSearch(track);
   }
 
-  updatePlaylistName(name){
-    this.setState({playlistName:name});
+  updatePlaylistName(name) {
+    this.setState({ playlistName: name });
   }
 
-  savePlaylist(){
-    const trackUris = this.state.playlistTracks.map(track=>track.uri);
-    Spotify.savePlaylist(this.state.playlistName,trackUris).then(()=>{
+  savePlaylist() {
+    const trackUris = this.state.playlistTracks.map((track) => track.uri);
+    Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
       this.setState({
-        playlistName:"new playlist",
-        playlistTracks:[]
-      })
-    })
+        playlistName: "new playlist",
+        playlistTracks: [],
+      });
+    });
   }
-}
 
-function App() {
-  return (
-    <div>
-      <h1 href="http://localhost:3000">Playlistporium</h1>
-      <div className="App">
-      <SearchBar onSearch={this.search} />
-      <div className="App-playlist">
-        <SearchResults SearchResults = {this.state.SearchResults} onAdd={this.doThese}/>
-        <Playlist playlistTracks={this.state.playlistTracks} onNameChange={this.updatePlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylist}/>
-
+  render() {
+    return (
+      <div>
+        <h1 href="http://localhost:3000">Playlistporium</h1>
+        <div className="App">
+          <SearchBar onSearch={this.search} />
+          <div className="App-playlist">
+            <SearchResults
+              SearchResults={this.state.SearchResults}
+              onAdd={this.doThese}
+            />
+            <Playlist
+              playlistTracks={this.state.playlistTracks}
+              onNameChange={this.updatePlaylistName}
+              onRemove={this.removeTrack}
+              onSave={this.savePlaylist}
+            />
+          </div>
+        </div>
       </div>
-    </div>
-
-    </div>
-    
-  );
+    );
+  }
 }
 
 export default App;
