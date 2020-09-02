@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+
 import "./Track.css";
 
-class Track extends Component {
+class Track extends React.Component {
   constructor(props) {
     super(props);
 
@@ -12,7 +13,8 @@ class Track extends Component {
   addTrack(event) {
     this.props.onAdd(this.props.track);
   }
-  remove(event) {
+
+  removeTrack(event) {
     this.props.onRemove(this.props.track);
   }
 
@@ -37,7 +39,7 @@ class Track extends Component {
         <div className="Track-information">
           <h3>{this.props.track.name}</h3>
           <p>
-            {this.props.track.artist}|{this.props.track.album}
+            {this.props.track.artist} | {this.props.track.album}
           </p>
           <iframe
             src={"https://open.spotify.com/embed/track/" + this.props.track.id}
@@ -46,7 +48,7 @@ class Track extends Component {
             frameborder="0"
             allowtransparency="true"
             allow="encrypted-media"
-            title="Preview"
+            title="preview"
           />
         </div>
         {this.renderAction()}

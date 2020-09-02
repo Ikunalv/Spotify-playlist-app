@@ -32,12 +32,16 @@ class Searchbar extends Component {
   render() {
     return (
       <div className="SearchBar">
-        <input
-          placeholder="Artists, songs or podcasts"
-          onChange={this.handleTermChange}
-          onKeyUp={this.handleEnter}
-        />
-        <button className="SearchButton" onClick={this.search}>SEARCH</button>
+        <div className="row">
+          <input
+            placeholder="Artists, songs or podcasts"
+            onChange={this.handleTermChange}
+            onKeyUp={this.handleEnter}
+          />
+          <button className="SearchButton" onClick={this.search}>
+            SEARCH
+          </button>
+        </div>
       </div>
     );
   }

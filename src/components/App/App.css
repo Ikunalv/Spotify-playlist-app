@@ -1,55 +1,55 @@
 body,
 html,
-#root{
+#root {
   height: 100%;
-  
 }
-html{
+html {
   font-size: 10px;
 }
 
-h1{
-  padding: 0.77rem 0;
-  background-color: #b16d22;
-  text-align:center;
-  font-family: "Montserrat",sans-serif;
-  font-size:1.88 rem;
-  color:#fff;
+h1 {
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  color: #000000;
+  font-weight: bold;
 }
 
-h1 .highlight{
-  color:rgb(46,113,238);
+h1 .highlight {
+  color: rgb(46, 113, 238);
 }
 
-a{
+a {
   text-decoration: none;
-  color:#fff;
+  color: #000000;
 }
 
-h2{
-  font-family: "Montserrat",sans-serif;
-  font-size:1.55 rem;
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.55 rem;
 }
 
-.App{
+.App {
   height: 100%;
-  padding:0 17% 10% 17%;
-  background-image: url('./bg1.jpg');
+  padding: 0 17% 10% 17%;
+  background-color: #fff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: "Montserrat",sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #fff;
 }
 
-.App-playlist{
+.App-playlist {
   display: flex;
   justify-content: space-between;
 }
 
-@media only screen and (max-width:1020px){
-  .App-playlist{
+@media only screen and (max-width: 1020px) {
+  .App-playlist {
     align-items: center;
     flex-direction: column;
   }
