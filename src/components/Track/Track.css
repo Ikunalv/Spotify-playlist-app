@@ -1,8 +1,9 @@
 .Track{
     display: flex;
+    background-color:#fff;
     align-items: center;
     border-bottom: 1px solid rgba(256,256,256,0.8);
-
+    align-self: center;
 }
 
 .Track-action{
@@ -11,7 +12,12 @@
     font-size: 1.05 rem;
     transition: color 0.25s;
     border:0px;
-    background-color: rgba(0,0,0,0);
+    font-size:14px;
+    font-weight:bold;
+    padding: 10px;
+    margin:20px;
+    border-radius: 15px;
+    background: linear-gradient(25deg, #5bb5ff 0,  #8c43ff 100%);
     color:#fff;
 
 }
@@ -21,19 +27,26 @@
 }
 
 .Track-information{
-    float: grow 1;
+    float: grow 1;  background-color:#fff;
     display: flex;
     flex-direction: column;
+    color:#000;
     justify-content: center;
     height: 180px;
 }
 
 .Track-information h3{
+    background-color:#fff;
     margin-bottom: 0.22 rem;
+    font-size:14px;
+    font-weight: bold;
+    margin-left:10px;
 }
 
 .Track-information p{
-    font-size: 0.83 rem;
+    font-size: 12px;
     font-weight: 300;
-    color:rgba(256,256,256,0.8)
+    color:#000;
+    background-color:#fff;
+    margin: 10px;
 }
