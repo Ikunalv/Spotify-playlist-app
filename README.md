@@ -1,5 +1,6 @@
-#Playlist Porium
-A simple web app to create and add playlists to Spotify.
+# Playlist Porium
+
+A simple web app built using React JS to create and add playlists to Spotify.
 
 <img src="app.png"
      alt="App screenshot"
@@ -15,3 +16,5 @@ Steps to run the app:
 7. Once you're ready with a playlist, click on **Save to Spotify** button to save your playlist.
 
 You'll have a playlist created on Spotify!
+
+
