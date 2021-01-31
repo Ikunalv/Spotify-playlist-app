@@ -1,6 +1,10 @@
 #Playlist Porium
 A simple web app to create and add playlists to Spotify.
 
+<img src="app.png"
+     alt="App screenshot"
+     style="float: left; margin-right: 10px;" />
+
 Steps to run the app:
 1. Run the app using **npm start** command.
 2. Give a name to your playlist. You can do it by editing the **'New Playlist'** textbox.
